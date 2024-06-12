@@ -1,0 +1,32 @@
+return {
+    {
+        "akinsho/bufferline.nvim",
+        version = "*",
+        dependencies = {
+            'nvim-tree/nvim-web-devicons',
+        },
+        config = true,
+    },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {},
+        config = true,
+    },
+    {
+        "lewis6991/gitsigns.nvim",
+        config = true,
+    },
+    {
+        "goolord/alpha-nvim",
+        config = function()
+            require'alpha'.setup(require'alpha.themes.dashboard'.config)
+        end
+    },
+    {
+        "RRethy/vim-illuminate",
+        config = function()
+            require('illuminate').configure()
+        end
+    },
+}
