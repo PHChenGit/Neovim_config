@@ -32,6 +32,7 @@ option.undodir = vim.fn.expand('$HOME/.local/share/nvim/undo')
 option.exrc = true
 option.wrap = false
 option.splitright = true
+option.scrolloff = 3
 
 -- Buffer Settings --
 buffer.fileenconding = "utf-8"
@@ -45,7 +46,7 @@ vim.keymap.set({ "n", "i", "v" }, "<Right>", "<Nop>")
 vim.keymap.set({ "n", "i", "v" }, "<Up>", "<Nop>")
 vim.keymap.set({ "n", "i", "v" }, "<Down>", "<Nop>")
 
-vim.keymap.set("n", "<A-Tab>", "<cmd>bNext<CR>")
+vim.keymap.set("n", "bn", "<cmd>bNext<CR>")
 vim.keymap.set("n", "<leader>bc", "<cmd>bd<CR>")
 vim.keymap.set("n", "<leader>t", ":tabedit", { noremap = true, silent = false, desc = "Open a new tabpage" })
 vim.api.nvim_set_keymap('n', '<C-]>', ':tabnext<CR>', { noremap = true, silent = true })
